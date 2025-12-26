@@ -1,0 +1,9 @@
+
+{
+  "name": "Yakroh - Developer Productivity Hub",
+  "description": "A premium landing page for Yakroh.com, a suite of high-performance tools for developers, featuring JSON Smart Viewer and AI-powered coding assistance.",
+  "requestFramePermissions": [
+    "camera",
+    "microphone"
+  ]
+}
