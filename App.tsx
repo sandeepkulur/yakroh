@@ -2,7 +2,6 @@
 import React, { useState, useEffect } from 'react';
 import Header from './components/Header';
 import Hero from './components/Hero';
-import Features from './components/Features';
 import ToolHighlight from './components/ToolHighlight';
 import GeminiAssistant from './components/GeminiAssistant';
 import Footer from './components/Footer';
@@ -23,7 +22,6 @@ const App: React.FC = () => {
         {activeTab === 'home' && (
           <>
             <Hero />
-            <Features />
             <ToolHighlight />
           </>
         )}
