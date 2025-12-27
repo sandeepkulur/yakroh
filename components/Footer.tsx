@@ -22,7 +22,6 @@ const Footer: React.FC = () => {
             <h4 className="text-white font-bold text-sm mb-6 uppercase tracking-wider">Product</h4>
             <ul className="space-y-4">
               <li><a href="https://jsonsv.yakroh.com" target="_blank" className="text-gray-500 hover:text-indigo-400 text-sm transition-colors">JSONSV</a></li>
-              <li><a href="#" className="text-gray-500 hover:text-indigo-400 text-sm transition-colors">AI Assistant</a></li>
               <li><a href="#" className="text-gray-500 hover:text-indigo-400 text-sm transition-colors">Changelog</a></li>
             </ul>
           </div>

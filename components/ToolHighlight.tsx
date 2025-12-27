@@ -15,13 +15,13 @@ const ToolHighlight: React.FC<ToolHighlightProps> = ({ forceDisplay = false }) =
             <h2 className="text-4xl font-bold text-white mb-6">JSONSV</h2>
             <p className="text-xl text-indigo-400 font-medium mb-6 italic">JSON Smart Viewer with surgical precision.</p>
             <p className="text-gray-400 text-lg mb-8 leading-relaxed">
-              JSONSV (JSON Smart Viewer) is the flagship tool of the Yakroh ecosystem. Built with a modern React and TypeScript stack, it delivers ultra-fast data exploration without ever sending your data to a server.
+              JSONSV (JSON Smart Viewer) is the flagship tool of the Yakroh ecosystem. It serves as a powerful JSON editor, viewer, and comparison tool. Built with a modern React and TypeScript stack, it delivers ultra-fast data exploration without ever sending your data to a server.
             </p>
             
             <ul className="space-y-4 mb-10">
               {[
                 '100% Client-side processing (Privacy First)',
-                'Intelligent JSON Comparison engine',
+                'Intelligent JSON Comparison and Diff Tool',
                 'Save and Restore state directly to disk',
                 'Advanced recursive tree visualization',
                 'Instant data type and hierarchy analysis'

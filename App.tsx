@@ -3,15 +3,17 @@ import React, { useState, useEffect } from 'react';
 import Header from './components/Header';
 import Hero from './components/Hero';
 import ToolHighlight from './components/ToolHighlight';
-import GeminiAssistant from './components/GeminiAssistant';
 import Footer from './components/Footer';
 
 const App: React.FC = () => {
-  const [activeTab, setActiveTab] = useState<'home' | 'tools' | 'ai'>('home');
+  const [activeTab, setActiveTab] = useState<'home' | 'tools'>('home');
 
   useEffect(() => {
-    // Basic SEO improvement via dynamic title
-    document.title = `Yakroh | ${activeTab.charAt(0).toUpperCase() + activeTab.slice(1)} - 10x Dev Productivity`;
+    if (activeTab === 'home') {
+      document.title = 'Yakroh | Free Online JSON Editor, Viewer, Formatter & Compare Tool';
+    } else {
+      document.title = `Yakroh | ${activeTab.charAt(0).toUpperCase() + activeTab.slice(1)} - Developer Productivity Tools`;
+    }
   }, [activeTab]);
 
   return (
@@ -40,14 +42,6 @@ const App: React.FC = () => {
                   <button className="px-6 py-2 bg-white/5 border border-white/10 rounded-full hover:bg-white/10 transition-colors">Notify Me</button>
                </div>
             </div>
-          </div>
-        )}
-
-        {activeTab === 'ai' && (
-          <div className="container mx-auto px-6 py-12 h-[calc(100vh-140px)] flex flex-col">
-            <h2 className="text-3xl font-bold mb-4 gradient-text inline-block">Yakroh AI Assistant</h2>
-            <p className="text-gray-400 mb-6">Ask for regex help, schema generation, or code architectural advice.</p>
-            <GeminiAssistant />
           </div>
         )}
       </main>

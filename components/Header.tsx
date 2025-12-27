@@ -2,8 +2,8 @@
 import React from 'react';
 
 interface HeaderProps {
-  activeTab: 'home' | 'tools' | 'ai';
-  setActiveTab: (tab: 'home' | 'tools' | 'ai') => void;
+  activeTab: 'home' | 'tools';
+  setActiveTab: (tab: 'home' | 'tools') => void;
 }
 
 const Header: React.FC<HeaderProps> = ({ activeTab, setActiveTab }) => {
@@ -14,10 +14,10 @@ const Header: React.FC<HeaderProps> = ({ activeTab, setActiveTab }) => {
           className="flex items-center space-x-2 cursor-pointer group"
           onClick={() => setActiveTab('home')}
         >
-          <div className="w-8 h-8 bg-gradient-to-br from-indigo-500 to-purple-600 rounded-lg flex items-center justify-center transform group-hover:rotate-12 transition-transform shadow-lg shadow-indigo-500/20">
-            <span className="text-white font-bold text-lg">Y</span>
+          <div className="w-8 h-8 rounded-lg flex items-center justify-center transform group-hover:rotate-12 transition-transform">
+            <img src="/logo.svg" alt="Yakroh Logo" className="w-full h-full" />
           </div>
-          <span className="text-xl font-bold tracking-tight text-white group-hover:text-indigo-400 transition-colors">yakroh.com</span>
+          <span className="text-xl font-bold tracking-tight text-white group-hover:text-indigo-400 transition-colors">Yakroh</span>
         </div>
 
         <div className="hidden md:flex items-center space-x-8">
@@ -33,12 +33,6 @@ const Header: React.FC<HeaderProps> = ({ activeTab, setActiveTab }) => {
           >
             Tools
           </button>
-          <button 
-            onClick={() => setActiveTab('ai')}
-            className={`text-sm font-medium transition-colors ${activeTab === 'ai' ? 'text-indigo-400' : 'text-gray-400 hover:text-white'}`}
-          >
-            AI Assistant
-          </button>
         </div>
 
         <div className="flex items-center space-x-4">
@@ -50,9 +44,6 @@ const Header: React.FC<HeaderProps> = ({ activeTab, setActiveTab }) => {
           >
             jsonsv.yakroh.com →
           </a>
-          <button className="px-4 py-2 bg-indigo-600 hover:bg-indigo-500 text-white text-sm font-semibold rounded-lg transition-all shadow-lg shadow-indigo-600/20">
-            Get Started
-          </button>
         </div>
       </nav>
     </header>

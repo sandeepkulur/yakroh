@@ -8,10 +8,6 @@ const Hero: React.FC = () => {
       <div className="absolute top-0 left-1/2 -translate-x-1/2 w-[1000px] h-[600px] bg-indigo-600/10 blur-[120px] rounded-full -z-10 opacity-50"></div>
       
       <div className="container mx-auto px-6 text-center">
-        <div className="inline-flex items-center px-4 py-1.5 rounded-full bg-indigo-500/10 border border-indigo-500/20 text-indigo-400 text-sm font-medium mb-8 animate-float">
-          <span className="mr-2">✨</span>
-          <span>Redefining Developer Productivity</span>
-        </div>
         
         <h1 className="text-5xl md:text-7xl font-extrabold leading-tight tracking-tight text-white mb-6">
           Tools that help you <br />
@@ -19,7 +15,7 @@ const Hero: React.FC = () => {
         </h1>
         
         <p className="text-lg md:text-xl text-gray-400 max-w-2xl mx-auto mb-10 leading-relaxed">
-          Yakroh builds ultra-focused utilities for engineers. From visualizing complex JSON structures to AI-assisted coding, we cut the noise and let you build.
+          Yakroh builds ultra-focused utilities for engineers. Use our free online JSON editor, viewer, and comparison tools to visualize complex structures and streamline your workflow.
         </p>
         
         <div className="flex flex-col sm:flex-row items-center justify-center gap-4">
