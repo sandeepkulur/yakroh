@@ -17,7 +17,7 @@ const Header: React.FC<HeaderProps> = ({ activeTab, setActiveTab }) => {
           <div className="w-8 h-8 rounded-lg flex items-center justify-center transform group-hover:rotate-12 transition-transform">
             <img src="/logo.svg" alt="Yakroh Logo" className="w-full h-full" />
           </div>
-          <span className="text-xl font-bold tracking-tight text-white group-hover:text-indigo-400 transition-colors">Yakroh</span>
+          <span className="text-xl font-bold tracking-tight text-white group-hover:text-indigo-400 transition-colors">YakRoh</span>
         </div>
 
         <div className="hidden md:flex items-center space-x-8">
