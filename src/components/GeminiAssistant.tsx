@@ -53,14 +53,14 @@ const GeminiAssistant: React.FC = () => {
   };
 
   return (
-    <div className="flex-grow flex flex-col glass-card rounded-2xl overflow-hidden border border-white/10 shadow-2xl">
+    <div className="flex-grow flex flex-col glass-card rounded-2xl overflow-hidden shadow-2xl">
       <div className="flex-grow overflow-y-auto p-6 space-y-4" ref={scrollRef}>
         {messages.map((m, i) => (
           <div key={i} className={`flex ${m.role === 'user' ? 'justify-end' : 'justify-start'}`}>
             <div className={`max-w-[80%] rounded-2xl p-4 ${
               m.role === 'user' 
                 ? 'bg-indigo-600 text-white rounded-tr-none' 
-                : 'bg-white/5 text-gray-200 border border-white/10 rounded-tl-none'
+                : 'bg-gray-200 dark:bg-white/5 text-gray-800 dark:text-gray-200 border border-gray-300 dark:border-white/10 rounded-tl-none transition-colors duration-300'
             }`}>
               <p className="whitespace-pre-wrap text-sm leading-relaxed">{m.content}</p>
             </div>
@@ -68,7 +68,7 @@ const GeminiAssistant: React.FC = () => {
         ))}
         {loading && (
           <div className="flex justify-start">
-            <div className="bg-white/5 border border-white/10 rounded-2xl rounded-tl-none p-4 flex space-x-2">
+            <div className="bg-gray-200 dark:bg-white/5 border border-gray-300 dark:border-white/10 rounded-2xl rounded-tl-none p-4 flex space-x-2 transition-colors duration-300">
               <div className="w-2 h-2 bg-gray-500 rounded-full animate-bounce"></div>
               <div className="w-2 h-2 bg-gray-500 rounded-full animate-bounce delay-100"></div>
               <div className="w-2 h-2 bg-gray-500 rounded-full animate-bounce delay-200"></div>
@@ -77,7 +77,7 @@ const GeminiAssistant: React.FC = () => {
         )}
       </div>
 
-      <div className="p-4 bg-[#030712]/50 border-t border-white/10">
+      <div className="p-4 bg-gray-100/50 dark:bg-[#030712]/50 border-t border-gray-200 dark:border-white/10 transition-colors duration-300">
         <div className="relative flex items-center">
           <input
             type="text"
@@ -85,7 +85,7 @@ const GeminiAssistant: React.FC = () => {
             onChange={(e) => setInput(e.target.value)}
             onKeyDown={(e) => e.key === 'Enter' && handleSend()}
             placeholder="Ask me anything about dev productivity..."
-            className="w-full bg-white/5 border border-white/10 rounded-xl py-4 px-5 pr-12 focus:outline-none focus:ring-2 focus:ring-indigo-500/50 transition-all text-sm placeholder:text-gray-500"
+            className="w-full bg-white dark:bg-white/5 border border-gray-300 dark:border-white/10 rounded-xl py-4 px-5 pr-12 focus:outline-none focus:ring-2 focus:ring-indigo-500/50 transition-all text-sm placeholder:text-gray-500 text-gray-900 dark:text-white"
           />
           <button 
             onClick={handleSend}
