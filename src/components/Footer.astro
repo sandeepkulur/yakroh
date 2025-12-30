@@ -1,0 +1,59 @@
+---
+const currentYear = new Date().getFullYear();
+---
+
+<footer class="bg-[#030712] border-t border-white/5 pt-16 pb-8">
+  <div class="container mx-auto px-6">
+    <div class="grid grid-cols-2 md:grid-cols-4 gap-12 mb-12">
+      <div class="col-span-2 md:col-span-1">
+        <div class="flex items-center space-x-2 mb-6">
+          <div class="w-6 h-6 bg-indigo-600 rounded flex items-center justify-center">
+            <span class="text-white font-bold text-xs">Y</span>
+          </div>
+          <span class="text-lg font-bold text-white">Yakroh</span>
+        </div>
+        <p class="text-gray-500 text-sm leading-relaxed mb-6">
+          Dedicated to building the finest tools for developer productivity. Minimal, powerful, and privacy-first.
+        </p>
+      </div>
+
+      <div>
+        <h4 class="text-white font-bold text-sm mb-6 uppercase tracking-wider">Product</h4>
+        <ul class="space-y-4">
+          <li><a href="https://jsonsv.yakroh.com" target="_blank" class="text-gray-500 hover:text-indigo-400 text-sm transition-colors">JSONSV</a></li>
+          <li><a href="#" class="text-gray-500 hover:text-indigo-400 text-sm transition-colors">Changelog</a></li>
+        </ul>
+      </div>
+
+      <div>
+        <h4 class="text-white font-bold text-sm mb-6 uppercase tracking-wider">Resources</h4>
+        <ul class="space-y-4">
+          <li><a href="#" class="text-gray-500 hover:text-indigo-400 text-sm transition-colors">Documentation</a></li>
+          <li><a href="#" class="text-gray-500 hover:text-indigo-400 text-sm transition-colors">Guides</a></li>
+          <li><a href="#" class="text-gray-500 hover:text-indigo-400 text-sm transition-colors">Support</a></li>
+        </ul>
+      </div>
+
+      <div>
+        <h4 class="text-white font-bold text-sm mb-6 uppercase tracking-wider">Company</h4>
+        <ul class="space-y-4">
+          <li><a href="#" class="text-gray-500 hover:text-indigo-400 text-sm transition-colors">About Us</a></li>
+          <li><a href="#" class="text-gray-500 hover:text-indigo-400 text-sm transition-colors">Privacy</a></li>
+          <li><a href="#" class="text-gray-500 hover:text-indigo-400 text-sm transition-colors">Terms</a></li>
+        </ul>
+      </div>
+    </div>
+
+    <div class="pt-8 border-t border-white/5 flex flex-col md:flex-row justify-between items-center text-gray-600 text-xs">
+      <p>© {currentYear} Yakroh. All rights reserved.</p>
+      <div class="flex items-center space-x-6 mt-4 md:mt-0">
+        <span class="flex items-center">
+           <div class="w-2 h-2 bg-green-500 rounded-full mr-2 animate-pulse"></div>
+           Systems Operational
+        </span>
+        <a href="#" class="hover:text-white transition-colors">Twitter</a>
+        <a href="#" class="hover:text-white transition-colors">GitHub</a>
+      </div>
+    </div>
+  </div>
+</footer>
