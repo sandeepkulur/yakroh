@@ -12,7 +12,7 @@ const { forceDisplay = false } = Astro.props;
       <div class="lg:w-1/2">
         {!forceDisplay && (
           <div class="mb-4">
-            <span class="text-sm font-medium text-blue-600 dark:text-[#2997ff] bg-blue-100 dark:bg-blue-900/30 px-3 py-1 rounded-full">Featured</span>
+            <span class="text-sm font-medium text-green-600 dark:text-green-400 bg-green-100 dark:bg-green-900/30 px-3 py-1 rounded-full">Featured</span>
           </div>
         )}
         <div class="flex items-center gap-4 mb-4">
@@ -34,7 +34,7 @@ const { forceDisplay = false } = Astro.props;
             'Query and filter your data'
           ].map((item) => (
             <li class="flex items-center text-gray-900 dark:text-[#f5f5f7] transition-colors duration-300">
-              <svg class="w-5 h-5 mr-3 text-blue-600 dark:text-[#2997ff]" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M5 13l4 4L19 7"></path></svg>
+              <svg class="w-5 h-5 mr-3 text-green-600 dark:text-green-400" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M5 13l4 4L19 7"></path></svg>
               {item}
             </li>
           ))}
@@ -44,7 +44,7 @@ const { forceDisplay = false } = Astro.props;
           href="https://jsonsv.yakroh.com"
           target="_blank"
           rel="noopener noreferrer"
-          class="inline-flex items-center px-6 py-3 bg-blue-600 hover:bg-blue-700 dark:bg-[#0071e3] dark:hover:bg-[#0077ed] text-white font-medium rounded-full transition-all text-base"
+          class="inline-flex items-center px-6 py-3 bg-green-600 hover:bg-green-700 dark:bg-green-500 dark:hover:bg-green-600 text-white font-medium rounded-full transition-all text-base"
         >
           Launch JSON Smart Viewer
         </a>
