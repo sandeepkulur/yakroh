@@ -6,7 +6,7 @@ interface Props {
 const { forceDisplay = false } = Astro.props;
 ---
 
-<section class={`py-24 ${forceDisplay ? '' : 'bg-gray-100 dark:bg-[#161617]'} transition-colors duration-300`}>
+<section class={`py-24 ${forceDisplay ? 'bg-gray-100 dark:bg-[#161617]' : 'bg-gray-100 dark:bg-[#161617]'} transition-colors duration-300`}>
   <div class="container mx-auto px-6">
     <div class="flex flex-col lg:flex-row items-center gap-16">
       <div class="lg:w-1/2">
