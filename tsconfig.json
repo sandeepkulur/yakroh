@@ -11,6 +11,7 @@
     ],
     "skipLibCheck": true,
     "types": [
+      "astro/client",
       "vite/client"
     ],
     "moduleResolution": "bundler",
