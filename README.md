@@ -2,18 +2,23 @@
   <img width="1200" height="475" alt="GHBanner" src="https://github.com/user-attachments/assets/0aa67016-6eaf-458a-adb2-6e31a0763ed6" />
 </div>
 
-# Yakroh Landing Page
+# Yakroh / Stikiroh
 
-This is the official landing page and marketing site for **Yakroh/Stikiroh**. It serves as the gateway for users to explore tools, features, and the AI-powered capabilities of the platform.
+This is the official landing page and marketing site for **Yakroh** and its flagship tool **Stikiroh**.
+
+**Stikiroh** is a privacy-first, local-first ideation board designed for speed and simplicity. It allows users to capture, organize, and refine ideas without server-side tracking.
+
+The site also features a suite of developer productivity tools, including a powerful JSON Text Editor and Viewer.
 
 Built with **Astro**, **React**, and **Tailwind CSS**.
 
 ## Features
 
-- **AI Assistant**: Integrated Gemini-powered assistant for user queries.
-- **Fast Performance**: Static site generation with Astro.
-- **Modern UI**: Styled with Tailwind CSS, supporting Dark/Light modes.
-- **Responsive**: Fully optimized for all device sizes.
+- **Stikiroh Showcase**: Interactive landing section demonstrating the power of the Stikiroh board.
+- **Developer Tools**: Suite of utilities like the JSON Smart Viewer & Editor.
+- **AI Assistant**: Integrated Gemini-powered assistant to help users navigate and use the tools.
+- **High Performance**: Static site generation with Astro for lightning-fast load times.
+- **Modern UI**: Polished glassmorphic design with full Dark/Light mode support.
 
 ## Getting Started
 
@@ -69,6 +74,6 @@ npm run preview
 
 ## Project Structure
 
-- `src/pages/`: Route definitions (`index`, `blog`, etc.).
-- `src/components/`: Reusable React and Astro components.
-- `src/layouts/`: Page layouts.
+- `src/pages/`: Route definitions (`index`, `tools`, `blog`, etc.).
+- `src/components/`: Reusable React and Astro components (e.g., `StikirohLandingSection`, `ToolHighlight`).
+- `src/layouts/`: Base page layouts.

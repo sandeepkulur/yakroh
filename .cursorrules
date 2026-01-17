@@ -1,0 +1,41 @@
+# Cursor Rules for Yakroh/Stikiroh
+
+## Tech Stack
+- **Framework**: Astro (v5.x)
+- **UI Library**: React (v19)
+- **Styling**: Tailwind CSS
+- **Language**: TypeScript
+
+## Project Guidelines
+
+### Astro & React Integration
+- Use **.astro** files for pages (`src/pages`) and static layouts.
+- Use **React (.tsx)** for interactive components that require state or client-side logic.
+- When using React components in Astro pages, always specify a client directive if interactivity is needed (e.g., `client:load`, `client:visible`).
+- Keep components small, focused, and reusable.
+
+### Styling (Tailwind CSS)
+- Use utility classes for all styling; avoid writing custom CSS in `<style>` blocks unless absolutely necessary.
+- Respect the Dark Mode implementation:
+  - Use `dark:` prefix for dark mode styles.
+  - Test UI in both light and dark modes.
+- Utilize the color variables defined in `src/layouts/Layout.astro` (`--accent`, etc.) where appropriate to maintain brand consistency.
+
+### TypeScript
+- Use strict typing. Avoid `any`.
+- Define interfaces for Component Props to ensure type safety.
+
+### File Structure
+- `src/pages/`: Routing and page composition.
+- `src/components/`: Reusable UI components. Group by feature if the list grows large.
+- `src/layouts/`: Wrappers for pages (Head, SEO, Metadata).
+
+### Best Practices
+- **Performance**: Minimize client-side JavaScript. Use Astro's zero-JS default where possible.
+- **Accessibility**: Ensure semantic HTML and proper ARIA labels.
+- **Imports**: Use relative imports or configured aliases.
+
+## Agent Behavior
+- When asked to create a page, always start by checking `src/layouts/Layout.astro` to ensure the new page inherits the correct global styles and head metadata.
+- If creating a new interactive feature, prefer React components inside the `src/components` directory.
+- Always check for responsiveness (Mobile vs Desktop) when writing Tailwind classes.
