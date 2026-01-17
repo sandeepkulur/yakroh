@@ -16,7 +16,7 @@ const { forceDisplay = false } = Astro.props;
           </div>
         )}
         <div class="flex items-center gap-4 mb-4">
-          <img src="/jsv.svg" alt="JSON Smart Viewer Logo" class="w-12 h-12" />
+          <img src="/jsv.svg" alt="JSON Smart Viewer Logo" class="w-12 h-12" width="48" height="48" loading="lazy" />
           <h2 class="text-4xl font-semibold text-gray-900 dark:text-[#f5f5f7] transition-colors duration-300">JSON Smart Viewer</h2>
         </div>
         <p class="text-gray-700 dark:text-[#86868b] text-lg mb-8 leading-relaxed transition-colors duration-300">
@@ -56,11 +56,17 @@ const { forceDisplay = false } = Astro.props;
             src="/jsonsv-light.png"
             alt="JSON Smart Viewer Preview"
             class="w-full h-auto object-cover opacity-80 group-hover:opacity-100 transition-opacity duration-500 dark:hidden"
+            width="800"
+            height="500"
+            loading="lazy"
           />
           <img
             src="/jsonsv-dark.png"
             alt="JSON Smart Viewer Preview"
             class="w-full h-auto object-cover opacity-80 group-hover:opacity-100 transition-opacity duration-500 hidden dark:block"
+            width="800"
+            height="500"
+            loading="lazy"
           />
         </div>
       </div>

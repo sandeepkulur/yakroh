@@ -17,7 +17,7 @@ export const StikirohLandingSection: React.FC = () => {
                         {/* Header */}
                         <div className="flex items-center gap-4 mb-6">
                             <div className="w-14 h-14 bg-white dark:bg-[#1c1c1e] rounded-xl shadow-lg flex items-center justify-center border border-gray-100 dark:border-white/10 p-2">
-                                <img src="/stikiroh-logo.svg" alt="Stikiroh Logo" className="w-full h-full" />
+                                <img src="/stikiroh-logo.svg" alt="Stikiroh Logo" className="w-full h-full" width="56" height="56" loading="lazy" />
                             </div>
                             <h2 className="text-3xl md:text-4xl font-bold text-gray-900 dark:text-white transition-colors duration-300">Stikiroh Board</h2>
                         </div>
@@ -61,11 +61,17 @@ export const StikirohLandingSection: React.FC = () => {
                                 src="/stikiroh-light.jpg"
                                 alt="Stikiroh Board Preview"
                                 className="w-full h-auto object-cover opacity-80 group-hover:opacity-100 transition-opacity duration-500 dark:hidden"
+                                width="800"
+                                height="600"
+                                loading="lazy"
                             />
                             <img
                                 src="/stikiroh-dark.jpg"
                                 alt="Stikiroh Board Preview"
                                 className="w-full h-auto object-cover opacity-80 group-hover:opacity-100 transition-opacity duration-500 hidden dark:block"
+                                width="800"
+                                height="600"
+                                loading="lazy"
                             />
                         </div>
                     </div>

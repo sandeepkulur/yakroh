@@ -5,9 +5,47 @@ import Footer from '../components/Footer.astro';
 interface Props {
 	title: string;
 	description?: string;
+    image?: string;
+    type?: 'website' | 'article';
+    canonicalURL?: string;
 }
 
-const { title, description = "Yakroh builds ultra-focused utilities for engineers. Use our free online JSON editor, viewer, and comparison tools to visualize complex structures and streamline your workflow." } = Astro.props;
+const { 
+    title, 
+    description = "Yakroh builds ultra-focused utilities for engineers. Use our free online JSON editor, viewer, and comparison tools to visualize complex structures and streamline your workflow.",
+    image = "/stikiroh-light.jpg",
+    type = "website",
+    canonicalURL = Astro.url.href
+} = Astro.props;
+
+const schemaMarkup = {
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@type": "Organization",
+      "@id": "https://www.yakroh.com/#organization",
+      "name": "Yakroh",
+      "url": "https://www.yakroh.com",
+      "logo": {
+        "@type": "ImageObject",
+        "url": "https://www.yakroh.com/logo.svg"
+      },
+      "sameAs": [
+        "https://github.com/yakroh" 
+      ]
+    },
+    {
+      "@type": "WebSite",
+      "@id": "https://www.yakroh.com/#website",
+      "url": "https://www.yakroh.com",
+      "name": "Yakroh",
+      "publisher": {
+        "@id": "https://www.yakroh.com/#organization"
+      },
+      "inLanguage": "en-US"
+    }
+  ]
+};
 ---
 
 <!doctype html>
@@ -18,21 +56,32 @@ const { title, description = "Yakroh builds ultra-focused utilities for engineer
 		<meta name="viewport" content="width=device-width" />
 		<link rel="icon" type="image/svg+xml" href="/logo.svg" />
 		<meta name="generator" content={Astro.generator} />
+        <link rel="canonical" href={canonicalURL} />
 		<title>{title}</title>
 
+        <!-- SEO/SMM -->
+        <meta name="keywords" content="JSON editor, JSON viewer, JSON compare, developer tools, local-first, privacy-first, productivity tools, Stikiroh, ideation board, sticky notes, kanban board, offline tools, json formatter, json validator" />
+        <meta name="author" content="Yakroh" />
+        <meta name="robots" content="index, follow" />
+
         <!-- Open Graph / Facebook -->
-        <meta property="og:type" content="website" />
+        <meta property="og:type" content={type} />
         <meta property="og:url" content={Astro.url} />
         <meta property="og:title" content={title} />
         <meta property="og:description" content={description} />
-        <meta property="og:image" content="/stikiroh-light.jpg" />
+        <meta property="og:image" content={new URL(image, Astro.url)} />
+        <meta property="og:site_name" content="Yakroh" />
 
         <!-- Twitter -->
         <meta property="twitter:card" content="summary_large_image" />
         <meta property="twitter:url" content={Astro.url} />
         <meta property="twitter:title" content={title} />
         <meta property="twitter:description" content={description} />
-        <meta property="twitter:image" content="/stikiroh-light.jpg" />
+        <meta property="twitter:image" content={new URL(image, Astro.url)} />
+        
+        <!-- Structured Data -->
+        <script type="application/ld+json" set:html={JSON.stringify(schemaMarkup)} />
+
 		<link rel="preconnect" href="https://fonts.googleapis.com">
 		<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 		<link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
