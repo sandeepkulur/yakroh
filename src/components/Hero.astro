@@ -2,46 +2,44 @@
 ---
 
 <section class="relative pt-24 pb-24 overflow-hidden">
-  <div class="container mx-auto px-6 text-center">
+  <div class="container mx-auto px-6 text-center relative z-10">
+        <div class="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[200%] h-[200%] bg-gradient-radial from-white/10 to-transparent pointer-events-none dark:from-white/5"></div>
 
-        <h1 class="text-5xl md:text-7xl font-semibold leading-tight tracking-tight text-gray-400 dark:text-[#86868b] mb-6 transition-colors duration-300">
-          Tools, Code & Insights.
+        <h1 class="text-5xl md:text-7xl lg:text-8xl font-bold leading-tight tracking-tight text-gray-900 dark:text-white mb-8 transition-colors duration-300 text-balance drop-shadow-sm">
+          Tools, Code & <br class="hidden md:block" />
+          <span class="bg-clip-text text-transparent bg-gradient-to-r from-green-500 via-teal-500 to-blue-500 animate-gradient-x">Insights.</span>
         </h1>
 
-        <p class="text-xl md:text-2xl text-gray-600 dark:text-[#86868b] max-w-2xl mx-auto mb-12 leading-relaxed font-medium transition-colors duration-300">
-          Crafting intuitive, powerful, and privacy-first developer tools to streamline your workflow.
+        <p class="text-lg md:text-2xl text-gray-600 dark:text-[#a1a1a6] max-w-2xl mx-auto mb-12 leading-relaxed font-normal text-balance">
+          Crafting intuitive, powerful, and <span class="text-gray-900 dark:text-white font-medium">privacy-first</span> developer tools to streamline your engineering workflow.
         </p>
 
-    <div class="flex flex-col items-center justify-center gap-8">
-      <a href="/tools" class="w-full sm:w-auto px-6 py-3 bg-green-600 text-white font-medium rounded-full hover:bg-green-700 dark:bg-green-500 dark:hover:bg-green-600 transition-all flex items-center justify-center text-base">
-        Explore Toolbox
+    <div class="flex flex-col items-center justify-center gap-10">
+      <a href="/tools" class="group relative inline-flex items-center justify-center px-8 py-4 text-lg font-medium text-white transition-all duration-200 bg-green-600 font-pj rounded-full focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-green-600 hover:bg-green-700 dark:bg-green-500 dark:hover:bg-green-600 shadow-xl shadow-green-500/20 hover:shadow-green-500/40 transform hover:-translate-y-0.5">
+          <div class="absolute -inset-3 rounded-full bg-green-400/20 opacity-0 group-hover:opacity-100 transition-opacity duration-200 blur-lg"></div>
+          <span class="relative">Explore Toolbox</span>
+          <svg class="w-5 h-5 ml-2 -mr-1 transition-transform group-hover:translate-x-1" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 7l5 5m0 0l-5 5m5-5H6"></path></svg>
       </a>
-      <div class="flex flex-col sm:flex-row gap-8 items-center justify-center w-full">
-        <div class="text-center">
-          <a
-            href="https://stiki.yakroh.com"
-            target="_blank"
-            rel="noopener noreferrer"
-            class="text-green-600 dark:text-green-400 font-medium hover:text-green-700 dark:hover:text-green-300 transition-colors text-base inline-flex items-center group"
-          >
-            Try Stikiroh Board <span class="ml-1 group-hover:translate-x-0.5 transition-transform">›</span>
+
+      <div class="grid grid-cols-1 sm:grid-cols-2 gap-8 w-full max-w-3xl mx-auto">
+        <div class="group p-6 rounded-2xl bg-gray-50 dark:bg-[#151516] border border-gray-100 dark:border-white/5 hover:border-green-500/20 transition-all duration-300 hover:shadow-lg dark:hover:shadow-green-900/10 text-center">
+          <a href="https://stiki.yakroh.com" target="_blank" rel="noopener noreferrer" class="block">
+              <h3 class="text-lg font-semibold text-gray-900 dark:text-white mb-2 flex items-center justify-center gap-2">
+                  Stikiroh Board
+                  <span class="text-green-500 opacity-0 group-hover:opacity-100 transition-opacity">↗</span>
+              </h3>
+              <p class="text-sm text-gray-500 dark:text-gray-400">Premium, local-first ideation workspace.</p>
           </a>
-          <p class="text-sm text-gray-500 dark:text-gray-400 mt-2 max-w-md mx-auto">
-            Premium, local-first ideation workspace for capturing and organizing ideas.
-          </p>
         </div>
-        <div class="text-center">
-          <a
-            href="https://jsonsv.yakroh.com"
-            target="_blank"
-            rel="noopener noreferrer"
-            class="text-green-600 dark:text-green-400 font-medium hover:text-green-700 dark:hover:text-green-300 transition-colors text-base inline-flex items-center group"
-          >
-            Try JSON Smart Viewer <span class="ml-1 group-hover:translate-x-0.5 transition-transform">›</span>
-          </a>
-          <p class="text-sm text-gray-500 dark:text-gray-400 mt-2 max-w-md mx-auto">
-            Your all-in-one JSON viewer, editor, formatter, and comparison tool.
-          </p>
+        
+        <div class="group p-6 rounded-2xl bg-gray-50 dark:bg-[#151516] border border-gray-100 dark:border-white/5 hover:border-blue-500/20 transition-all duration-300 hover:shadow-lg dark:hover:shadow-blue-900/10 text-center">
+            <a href="https://jsonsv.yakroh.com" target="_blank" rel="noopener noreferrer" class="block">
+                <h3 class="text-lg font-semibold text-gray-900 dark:text-white mb-2 flex items-center justify-center gap-2">
+                    JSON Smart Viewer
+                    <span class="text-blue-500 opacity-0 group-hover:opacity-100 transition-opacity">↗</span>
+                </h3>
+                <p class="text-sm text-gray-500 dark:text-gray-400">Visual editor & comparison tool.</p>
+            </a>
         </div>
       </div>
     </div>
