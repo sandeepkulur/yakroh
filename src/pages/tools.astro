@@ -2,6 +2,7 @@
 import Layout from '../layouts/Layout.astro';
 import ToolHighlight from '../components/ToolHighlight.astro';
 import MoreTools from '../components/MoreTools.astro';
+import StikirohLandingSection from '../components/StikirohLandingSection';
 ---
 
 <Layout title="Yakroh | Tools - Developer Productivity Tools">
@@ -16,6 +17,7 @@ import MoreTools from '../components/MoreTools.astro';
     </div>
   </section>
 
+  <StikirohLandingSection client:load />
   <ToolHighlight forceDisplay />
   <MoreTools />
 </Layout>

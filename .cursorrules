@@ -1,0 +1,84 @@
+# Cursor Rules for Yakroh/Stikiroh
+
+## Tech Stack
+- **Framework**: Astro (v5.x)
+- **UI Library**: React (v19)
+- **Styling**: Tailwind CSS
+- **Icons**: Lucide React (for interactive components), inline SVG (for static)
+- **Language**: TypeScript
+
+## Critical Rules
+
+### Privacy & Local-First (Stikiroh)
+- **NO SERVER STORAGE**: Stikiroh is strictly local-first. Never suggest adding a database or server-side persistence for user data.
+- **Persistence**: Use `localStorage` or `IndexedDB` (via Dexie.js) for all data storage.
+- **Privacy**: Respect the "no tracking" policy. Avoid external analytics scripts that identify users.
+
+### Design & Aesthetics
+- **Premium Quality**: Designs must look polished, expensive, and modern. This is non-negotiable.
+- **Glassmorphism**: Use `backdrop-blur-xl` and heavy transparency (`bg-white/5`, `border-white/10`) for depth.
+- **Dark Mode**: Prioritize Dark Mode. Use `dark:` variants for all colors. Default theme is dark.
+- **Colors**: Use the custom accents (`--accent`, `@color-accent`) defined in global CSS. Avoid default Tailwind colors (e.g., `text-blue-500`) for primary elements.
+- **Gradients**: Use gradient text for hero sections (`bg-clip-text text-transparent bg-gradient-to-r from-green-500 via-teal-500 to-blue-500`)
+- **Animations**: Add smooth transitions (`transition-all duration-300`) and hover effects (`hover:-translate-y-0.5`)
+
+### Responsive Design
+- **Mobile-First**: Design for mobile screens first, then scale up
+- **Breakpoints**: Use Tailwind breakpoints (`md:`, `lg:`) consistently
+- **Navigation**: 
+  - Desktop: Horizontal nav with visible links
+  - Mobile: Hamburger menu with slide-out panel
+- **Touch Targets**: Ensure buttons and interactive elements are at least 44x44px on mobile
+- **Container Padding**: Always use `px-6` on containers for mobile spacing
+
+## Project Guidelines
+
+### Astro & React Integration
+- **.astro**: Use for static pages and layouts
+- **.tsx**: Use React for all interactive components (Stikiroh board, Tools, MobileMenu, ThemeToggle)
+- **Directives**: Always specify `client:load` or `client:only="react"` for interactive islands
+- **Island Architecture**: Keep islands small and focused for optimal performance
+
+### Component Architecture
+- **Small & Focused**: Break complex UIs into smaller, single-purpose components
+- **Reusable**: Place shared UI elements in `src/components/`
+- **Naming**: Use PascalCase for React components, kebab-case for Astro components
+- **Props**: Define TypeScript interfaces for all component props
+- **Subdomains**: Be aware that `stiki.yakroh.com` (Stikiroh) has different context than `yakroh.com`
+
+### File Structure
+- `src/pages/`: Routing (index, tools, blog, contact)
+- `src/components/`: Reusable UI (Header, Footer, Hero, etc.)
+- `src/layouts/`: Wrappers (Layout.astro with SEO, head, global styles)
+- `public/`: Static assets (images, logos, icons)
+
+### SEO Best Practices
+- **Title Tags**: Descriptive, unique titles for each page
+- **Meta Descriptions**: Compelling descriptions that summarize page content
+- **Open Graph**: Include OG tags for social sharing (`og:title`, `og:description`, `og:image`)
+- **Twitter Cards**: Add Twitter card metadata
+- **Semantic HTML**: Use proper heading hierarchy (single `<h1>` per page)
+
+### Social Media Integration
+- **YouTube Icon**: Red hover effect (`hover:bg-[#ff0000] hover:text-white`)
+- **GitHub Icon**: Gray hover effect (`hover:bg-gray-700 hover:text-white`)
+- **Consistent Sizing**: Use `w-8 h-8` for icon containers, `w-5 h-5` for SVG icons
+- **Accessibility**: Always include `aria-label` for icon-only links
+
+### Icon Usage
+- **Lucide React**: Use for interactive components (MobileMenu, ThemeToggle)
+- **Inline SVG**: Use for static icons in Astro components (Header social icons)
+- **Size Consistency**: Maintain consistent icon sizes across components
+
+### Theme Toggle
+- **Implementation**: Use localStorage to persist theme preference
+- **Initialization**: Include inline script in `<head>` to prevent flash
+- **Toggle Logic**: Switch between `dark` class on `<html>` element
+- **Default**: Dark mode is the default theme
+
+## Agent Behavior
+- **Context First**: Check `CONTEXT.md` if unsure about architecture
+- **Aesthetics First**: If generating UI code, ensure it matches the premium design language
+- **No Surprises**: Do not introduce new heavy dependencies without asking
+- **Mobile Responsive**: Always test/consider mobile layouts when creating UI
+- **Accessibility**: Include proper ARIA labels, semantic HTML, and keyboard navigation

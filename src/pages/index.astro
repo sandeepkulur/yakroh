@@ -2,11 +2,13 @@
 import Layout from '../layouts/Layout.astro';
 import Hero from '../components/Hero.astro';
 import ToolHighlight from '../components/ToolHighlight.astro';
+import StikirohLandingSection from '../components/StikirohLandingSection';
 
-const description = "Yakroh offers a free online JSON editor, viewer, and formatter. Our powerful comparison tool helps you visualize complex structures and streamline your workflow. Boost your productivity with our ultra-focused utilities for engineers.";
+const description = "Yakroh builds privacy-first developer tools. Use Stikiroh Board for local-first ideation and our advanced JSON Smart Viewer for data analysis, editing, and comparison.";
 ---
 
-<Layout title="Yakroh | Free Online JSON Editor, Viewer, Formatter & Compare Tool" description={description}>
+<Layout title="Yakroh | Developer Tools - Stikiroh Ideation Board & JSON Smart Viewer" description={description}>
 	<Hero />
+	<StikirohLandingSection client:load />
 	<ToolHighlight />
 </Layout>
