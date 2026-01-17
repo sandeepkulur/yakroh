@@ -61,60 +61,17 @@ export const StikirohLandingSection: React.FC = () => {
 
                 {/* Right Column: Visual/Screenshot */}
                 <div className="flex-1 w-full lg:w-auto">
-                    <div className="relative group rounded-xl overflow-hidden shadow-2xl bg-white dark:bg-slate-800 border border-slate-200 dark:border-slate-700 aspect-[16/10] flex flex-col">
-
-                        {/* Mock Header */}
-                        <div className="h-8 bg-slate-100 dark:bg-slate-900 border-b border-slate-200 dark:border-slate-700 flex items-center px-4 gap-2">
-                            <div className="w-3 h-3 rounded-full bg-red-400"></div>
-                            <div className="w-3 h-3 rounded-full bg-yellow-400"></div>
-                            <div className="w-3 h-3 rounded-full bg-green-400"></div>
-                        </div>
-
-                        {/* Mock Content */}
-                        <div className="flex-1 p-6 relative bg-slate-50 dark:bg-slate-800/50">
-                            {/* Abstract representation of the board */}
-                            <div className="grid grid-cols-2 gap-4">
-                                {/* Note 1 */}
-                                <div className="bg-yellow-100 dark:bg-yellow-900/40 p-4 rounded-lg shadow-sm transform rotate-1 border border-yellow-200/50">
-                                    <div className="h-2 w-12 bg-yellow-400/50 rounded mb-2"></div>
-                                    <div className="space-y-2">
-                                        <div className="h-2 w-full bg-slate-400/20 rounded"></div>
-                                        <div className="h-2 w-3/4 bg-slate-400/20 rounded"></div>
-                                    </div>
-                                </div>
-                                {/* Note 2 */}
-                                <div className="bg-blue-100 dark:bg-blue-900/40 p-4 rounded-lg shadow-sm -rotate-1 border border-blue-200/50">
-                                    <div className="h-2 w-16 bg-blue-400/50 rounded mb-2"></div>
-                                    <div className="space-y-2">
-                                        <div className="h-2 w-full bg-slate-400/20 rounded"></div>
-                                        <div className="h-2 w-2/3 bg-slate-400/20 rounded"></div>
-                                    </div>
-                                </div>
-                                {/* Note 3 */}
-                                <div className="bg-green-100 dark:bg-green-900/40 p-4 rounded-lg shadow-sm rotate-2 border border-green-200/50">
-                                    <div className="h-2 w-10 bg-green-400/50 rounded mb-2"></div>
-                                    <div className="space-y-2">
-                                        <div className="h-2 w-full bg-slate-400/20 rounded"></div>
-                                        <div className="h-2 w-full bg-slate-400/20 rounded"></div>
-                                    </div>
-                                </div>
-                                {/* Note 4 */}
-                                <div className="bg-pink-100 dark:bg-pink-900/40 p-4 rounded-lg shadow-sm -rotate-2 border border-pink-200/50">
-                                    <div className="h-2 w-14 bg-pink-400/50 rounded mb-2"></div>
-                                    <div className="space-y-2">
-                                        <div className="h-2 w-full bg-slate-400/20 rounded"></div>
-                                    </div>
-                                </div>
-                            </div>
-
-                            {/* Floating Elements Mock */}
-                            <div className="absolute bottom-4 left-1/2 transform -translate-x-1/2 w-3/4 h-10 bg-white dark:bg-slate-700/80 backdrop-blur-md rounded-full shadow-lg border border-slate-200 dark:border-slate-600"></div>
-
-                            <div className="absolute inset-0 flex items-center justify-center pointer-events-none">
-                                <span className="text-4xl filter drop-shadow-md">🚀</span>
-                            </div>
-                        </div>
-
+                    <div className="relative group rounded-xl overflow-hidden shadow-2xl bg-white dark:bg-slate-800 border border-slate-200 dark:border-slate-700">
+                        <img
+                            src="/stikiroh-light.jpg"
+                            alt="Stikiroh Board Preview"
+                            className="w-full h-auto object-cover block dark:hidden transform transition-transform duration-700 hover:scale-105"
+                        />
+                        <img
+                            src="/stikiroh-dark.jpg"
+                            alt="Stikiroh Board Preview"
+                            className="w-full h-auto object-cover hidden dark:block transform transition-transform duration-700 hover:scale-105"
+                        />
                     </div>
                 </div>
             </div>
