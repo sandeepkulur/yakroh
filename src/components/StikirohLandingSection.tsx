@@ -17,8 +17,8 @@ export const StikirohLandingSection: React.FC = () => {
                     {/* Header */}
                     <div className="space-y-4">
                         <div className="flex items-center gap-4">
-                            <div className="w-12 h-12 bg-yellow-400 rounded-lg flex items-center justify-center shadow-sm text-slate-900">
-                                <Zap className="w-6 h-6" fill="currentColor" />
+                            <div className="w-12 h-12 flex items-center justify-center">
+                                <img src="/stikiroh-logo.svg" alt="Stikiroh Logo" className="w-full h-full" />
                             </div>
                             <h2 className="text-4xl md:text-5xl font-bold text-slate-900 dark:text-slate-100 tracking-tight">
                                 Stikiroh Board
