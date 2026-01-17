@@ -1,79 +1,65 @@
+# Yakroh / Stikiroh
+
 <div align="center">
   <img width="1200" height="475" alt="GHBanner" src="https://github.com/user-attachments/assets/0aa67016-6eaf-458a-adb2-6e31a0763ed6" />
 </div>
 
-# Yakroh / Stikiroh
+<div align="center">
+  <br />
+  <a href="https://stiki.yakroh.com"><strong>Stikiroh Board</strong></a> · <a href="https://yakroh.com/tools"><strong>Developer Tools</strong></a> · <a href="https://yakroh.com"><strong>Yakroh.com</strong></a>
+  <br />
+</div>
 
-This is the official landing page and marketing site for **Yakroh** and its flagship tool **Stikiroh**.
+## Overview
 
-**Stikiroh** is a privacy-first, local-first ideation board designed for speed and simplicity. It allows users to capture, organize, and refine ideas without server-side tracking.
+**Yakroh** is a modern developer hub and marketing platform. It features **Stikiroh**, a premium, local-first ideation board, along with a suite of developer productivity tools.
 
-The site also features a suite of developer productivity tools, including a powerful JSON Text Editor and Viewer.
+## Stikiroh: Ideation Board
+**Stikiroh** (`stiki.yakroh.com`) is a privacy-focused tool for capturing and organizing ideas.
 
-Built with **Astro**, **React**, and **Tailwind CSS**.
+- **Local-First**: All data is stored in your browser (IndexedDB). Zero server-side tracking.
+- **Smart Organization**: Tagging system with internal `@untagged` handling.
+- **Sorting**: Sort ideas by Text (A-Z, Z-A) or Date.
+- **PWA Support**: Install as a native app on your device.
+- **Premium UI**: Glassmorphic design with full Dark/Light mode support.
 
-## Features
+## Developer Tools
+Yakroh hosts essential utilities for developers:
 
-- **Stikiroh Showcase**: Interactive landing section demonstrating the power of the Stikiroh board.
-- **Developer Tools**: Suite of utilities like the JSON Smart Viewer & Editor.
-- **AI Assistant**: Integrated Gemini-powered assistant to help users navigate and use the tools.
-- **High Performance**: Static site generation with Astro for lightning-fast load times.
-- **Modern UI**: Polished glassmorphic design with full Dark/Light mode support.
+- **JSON Smart Viewer**: Validate, format, and diff JSON data locally.
+- **AI Assistant**: Integrated Gemini-powered help for navigating tools.
+
+## Tech Stack
+Built with **Astro 5**, **React 19**, and **Tailwind CSS**.
 
 ## Getting Started
 
-Follow these steps to run the project locally.
-
 ### Prerequisites
-
-- **Node.js** (v18 or higher recommended)
-- **npm** or **yarn**
+- Node.js v18+
+- npm or yarn
 
 ### Installation
 
-1.  **Clone the repository:**
+1.  **Clone & Install:**
     ```bash
     git clone <repository-url>
     cd 00-yakroh
-    ```
-
-2.  **Install dependencies:**
-    ```bash
     npm install
     ```
 
-3.  **Configure Environment:**
-    Create a `.env.local` file in the root directory and add your Gemini API key:
+2.  **Environment Setup:**
+    Create `.env.local`:
     ```env
     GEMINI_API_KEY=your_api_key_here
     ```
 
-### Running Locally
-
-Start the development server:
-
-```bash
-npm run dev
-```
-
-Visit `http://localhost:4321` to view the site.
-
-## Build for Production
-
-To create a production build:
-
-```bash
-npm run build
-```
-
-To preview the production build:
-
-```bash
-npm run preview
-```
+3.  **Run Locally:**
+    ```bash
+    npm run dev
+    ```
+    Visit `http://localhost:4321`.
 
 ## Project Structure
-
-- `src/pages/`: Route definitions (`index`, `tools`, `blog`, etc.).
-- `src/components/`: Reusable React and Astro components (e.g., `StikirohLandingSection`, `ToolHighlight`).
-- `src/layouts/`: Base page layouts.
+- `src/pages/`: Route definitions (`index`, `tools`).
+- `src/components/`: Reusable UI (`StikirohLandingSection`, `ToolHighlight`).
+- `src/layouts/`: Base layouts with SEO `head` and global styles.
